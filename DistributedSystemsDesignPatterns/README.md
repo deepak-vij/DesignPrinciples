@@ -4,9 +4,7 @@
   - Ambassadors
   - Adapter
   - ...
-<br>
 - Stability Patterns
   - ...
-<br>
 - Capacity Patterns
   - ...

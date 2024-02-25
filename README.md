@@ -1,3 +1,4 @@
 # Software Design Principles &amp; Guidelines
-[Common-Sensical Distributed Systems & Cloud Computing Software Design Patterns](/DistributedSystemsDesignPatterns/README.md)
-<br>[Software Development Design Patterns](/SoftwareDevelopmentDesignPatterns/README.md)
+- [Platform Engineering Design Patterns](/DistributedSystemsDesignPatterns/README.md)
+<br><br>
+- [Software Development Design Patterns](/SoftwareDevelopmentDesignPatterns/README.md)

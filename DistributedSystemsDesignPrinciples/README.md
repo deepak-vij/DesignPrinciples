@@ -1,4 +1,4 @@
-# Platform Engineering Design Patterns (Common-Sensical)
+# Platform Engineering Key Design Patterns (Common-Sensical)
 Goal is to leverage the following well-proven design patterns as part of the **Platform Engineering** initiative - **Standing on the Shoulders of Giants** by learning from the prior experinces of system developers. Cloud-scale highly available distributed systems are designed to provides key features such as high-availability/failover, scalability/elasticity, security and portability.
 - **Availability/Fault-Tolerance**: Cloud platform addresses highly availability and failovers both at application and infrastructure services level.
   - Use probes correctly to detect and automatically recover from failures.
@@ -8,7 +8,7 @@ Goal is to leverage the following well-proven design patterns as part of the **P
 - **Scalability**: Cloud platform provides an exteremely elastic environment by enabling horizontal/vertical scaling of workloads on the basis of their resource utilizations reaching the certain desired threshold/s. key goal is to enable automatic scaling to ensure overall capacity management.
   - Application & Infrastructure services are well prepare for observability/monitoring​.
   - **Replicated Load-Balanced Services Pattern**: 
-  - **Scatter/Gather Pattern: .
+  - **Scatter/Gather Pattern**: .
 - **Security**: Platform addresses security at various levels: cluster, application and network. The API endpoints are secured through transport layer security (TLS/mTLS).
 - **Portability**: Platform enables portability in terms of operating system choices, processor architectures (either virtual machines or bare metal), cloud providers, and various container runtimes, besides Docker, can also be added. It also supports workloads across hybrid (private and public cloud) or multi-cloud environments. This, in turn, also supports availability zone fault tolerance within a single cloud provider. 
 - **General Design Patterns**

@@ -12,13 +12,13 @@ Goal is to leverage the following well-proven design patterns as part of the **P
 - **Security**: Platform addresses security at various levels: cluster, application and network. The API endpoints are secured through transport layer security (TLS/mTLS).
 - **Portability**: Platform enables portability in terms of operating system choices, processor architectures (either virtual machines or bare metal), cloud providers, and various container runtimes, besides Docker, can also be added. It also supports workloads across hybrid (private and public cloud) or multi-cloud environments. This, in turn, also supports availability zone fault tolerance within a single cloud provider. 
 - **General Design Patterns**
-  - **Side-Car**: In order to provide Modularity and Reusability, in this pattern, the sidecar is attached to a parent application (typically containerized) and provides supporting features for the application. The sidecar also shares the same life cycle as the parent application, being created and retired alongside the parent. The sidecar pattern is made up of two containers. The first is the application container. It contains the core logic for the application. Without this container, the application would not exist. In addition to the application container, there is a sidecar container. The role of the sidecar is to augment and improve the application container, often without the application container’s knowledge. In its simplest form, a sidecar container can be used to add functionality to a container that might otherwise be difficult to improve. Sidecar containers are co-scheduled onto the same machine via an atomic container group. In addition to being scheduled on the same machine, the application container and sidecar container share a number of resources, including parts of the filesystem, hostname and network, and many other namespaces. Typical usage of this design pattern is the following:
-    - **Security/SSL-Termination**
-    - **Obserability**
-    - **Logging**
-    - **Debugging**
+  - **Side-Car**: In order to provide Modularity and Reusability. in the sidecar pattern, the secondary container enhances the main application (typically containerized) by providing new functionality. The sidecar shares the same life cycle as the parent application, being created and retired alongside the parent. The sidecar pattern is typically made up of two containers. The first is the application container. It contains the core logic for the application. Without this container, the application would not exist. In addition to the application container, there is a sidecar container. The role of the sidecar is to augment and improve the application container, often without the application container’s knowledge. In its simplest form, a sidecar container can be used to add functionality to a container that might otherwise be difficult to improve. Sidecar containers are co-scheduled onto the same machine via an atomic container group. In addition to being scheduled on the same machine, the application container and sidecar container share a number of resources, including parts of the filesystem, hostname and network, and many other namespaces. Typical usage of this design pattern is the following:
+    - Security/SSL-Termination
+    - Obserability
+    - Logging
+    - Debugging
   - **Ambassador Pattern**: Ambassador design pattern is typically used for proxying outbound communication to and from a main container. For example, application maybe speaking the memcache protocol using a twemproxy ambassador. The application believes that it is simply talking to a single memcache on localhost, but actually twemproxy is sharding the requests across a distributed installation of multiple memcache nodes elsewhere in the cluster.
-    - **Service Discovery** 
+    - Service Discovery 
   - **Adapter**:
-    - **...**
+    - ...
   - **Ownership Election**:

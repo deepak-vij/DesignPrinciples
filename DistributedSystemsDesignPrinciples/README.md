@@ -17,8 +17,9 @@ Goal is to leverage the following well-proven design patterns as part of the **P
     - Obserability
     - Logging
     - Debugging
-  - **Ambassador Pattern**: Ambassador design pattern is typically used for proxying outbound communication to and from a main container. For example, application maybe speaking the memcache protocol using a twemproxy ambassador. The application believes that it is simply talking to a single memcache on localhost, but actually twemproxy is sharding the requests across a distributed installation of multiple memcache nodes elsewhere in the cluster.
-    - Service Discovery 
-  - **Adapter**:
-    - ...
-  - **Ownership Election**:
+  - **Ambassador Pattern**: Ambassador design pattern is typically used for proxying outbound communication to and from a main container. For example, application maybe speaking the memcache protocol using a twemproxy ambassador. The application believes that it is simply talking to a single memcache on localhost, but actually twemproxy is sharding the requests across a distributed installation of multiple memcache nodes elsewhere in the cluster. Typical usage of this design pattern is the following:
+    - Service Discovery/Brokering 
+  - **Adapter**: Real-world application development is a heterogeneous, hybrid exercise. Some parts of your application might be written from scratch by your team, some supplied by vendors, and some might consist entirely of off-the-shelf open source or proprietary software that you consume as precompiled binary. The net effect of this heterogeneity is that any real-world application you deploy will have been written in a variety of languages, with a variety of conventions for logging, monitoring, and other common services. Yet, to effectively monitor and operate your application, you need common interfaces. When each application provides metrics using a different format and interface, it is very difficult to collect all of those metrics in a single place for visualization and alerting. This is where the adapter pattern is relevant. The adapter pattern uses a secondary container to standardise external interfaces. In contrast to the ambassador pattern, which presents an application with a simplified view of the outside world, adapters present the outside world with a simplified, homogenized view of an application.They do this by standardizing output and interfaces across multiple containers.Typical usage of this design pattern is the following:
+    - Standardise log formats
+    - Provide common metrics for applications
+  - **Ownership Election**:Typical usage of this design pattern is the following:

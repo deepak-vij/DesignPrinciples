@@ -3,16 +3,22 @@ Goal is to leverage the following well-proven design patterns as part of the **P
 - **Availability/Fault-Tolerance**: Cloud platform addresses highly availability and failovers both at application and infrastructure services level.
   - Use probes correctly to detect and automatically recover from failures.
   - Make the application & infrastructure components fail hard (crashing), fast (as soon as a problem occurs), and loudly (with informative error messages in their logs). Doing so prevents data from being stuck in a strange state in the failed application and allows routing of traffic only to healthy component instances, and also provides all the information needed for root cause analysis.
-  - **Circuit-Breakers Pattern*: 
+  - **Circuit-Breakers Pattern**: Similar to electrical fuses that prevent fires when a circuit that is connected to the electrical grid starts drawing a high amount of power which causes the wires to heat up and combust, the Similar to electrical fuses, circuit breaker design pattern is a fail-first mechanism that shuts down the circuit, request/response relationship or a service in order to prevent bigger failures. A simplistic implementation of this design pattern may be a simple counter that records success and failure states of a circuit along with a timestamp and calculates the consecutive number of failures. One can simply apply a wrapper component around potentially dangerous operations (typically outbound/egress) to circumvent calls when the system is not healthy. This is different versus retries as circuit brakers exist to prevent operations rather than re-execute them. 
   - **Bulkheads Pattern**: Sharded Services.
 - **Scalability**: Cloud platform provides an exteremely elastic environment by enabling horizontal/vertical scaling of workloads on the basis of their resource utilizations reaching the certain desired threshold/s. key goal is to enable automatic scaling to ensure overall capacity management.
-  - Application & Infrastructure services are well prepare for observability/monitoring​.
+  - **Observability/Monitoring**: ​Application & Infrastructure services are well prepared for observability/monitoring​, possibly using Ambassador design pattern.
   - **Replicated Load-Balanced Services Pattern**: 
   - **Scatter/Gather Pattern**: .
 - **Security**: Platform addresses security at various levels: cluster, application and network. The API endpoints are secured through transport layer security (TLS/mTLS).
 - **Portability**: Platform enables portability in terms of operating system choices, processor architectures (either virtual machines or bare metal), cloud providers, and various container runtimes, besides Docker, can also be added. It also supports workloads across hybrid (private and public cloud) or multi-cloud environments. This, in turn, also supports availability zone fault tolerance within a single cloud provider. 
 - **General Design Patterns**
-  - **Side-Car**: 
-  - **Service Discovery Ambassador Pattern**: 
-  - **Adapter**: 
-  - **Ownership Election**: 
+  - **Side-Car**: In order to provide Modularity and Reusability, in this pattern, the sidecar is attached to a parent application (typically containerized) and provides supporting features for the application. The sidecar also shares the same life cycle as the parent application, being created and retired alongside the parent. The sidecar pattern is made up of two containers. The first is the application container. It contains the core logic for the application. Without this container, the application would not exist. In addition to the application container, there is a sidecar container. The role of the sidecar is to augment and improve the application container, often without the application container’s knowledge. In its simplest form, a sidecar container can be used to add functionality to a container that might otherwise be difficult to improve. Sidecar containers are co-scheduled onto the same machine via an atomic container group. In addition to being scheduled on the same machine, the application container and sidecar container share a number of resources, including parts of the filesystem, hostname and network, and many other namespaces. Typical usage of this design pattern is the following:
+    - **Security/SSL-Termination**
+    - **Obserability**
+    - **Logging**
+    - **Debugging**
+  - **Ambassador Pattern**: Ambassador design pattern is typically used for proxying outbound communication to and from a main container. For example, application maybe speaking the memcache protocol using a twemproxy ambassador. The application believes that it is simply talking to a single memcache on localhost, but actually twemproxy is sharding the requests across a distributed installation of multiple memcache nodes elsewhere in the cluster.
+    - **Service Discovery** 
+  - **Adapter**:
+    - **...**
+  - **Ownership Election**:

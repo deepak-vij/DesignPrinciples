@@ -3,7 +3,7 @@ The Open-Closed Principle is one of the key principles of software design that e
 
 Usage of OCP pattern is to build systems that are more maintainable, flexible and scalable. OCP helps to avoid making changes in existing well-tested code, reducing the risk of introducing bugs and issues while developing.
 
-In our example code (without using OCP pattern), the ProcessPayment() function has a switch statement that checks the payment type and performs different logic based on the payment type. This violates the Open-Closed Principle because if a new payment type is introduced, the ProcessPayment() function needs to be modified to handle the new type.
+In our companion example code (without using OCP pattern), the ProcessPayment() function has a switch statement that checks the payment type and performs different logic based on the payment type. This violates the Open-Closed Principle because if a new payment type is introduced, the ProcessPayment() function needs to be modified to handle the new type.
 
 In the refactored code, we have introduced the Payment interface, which defines the Process() method. The PaymentProcessor struct and its ProcessPayment() method handle the processing of payments by accepting any type that satisfies the Payment interface. The CreditCardPayment and BankTransferPayment structs implement the Payment interface by providing their respective Process() methods. The refactored code demonstates how to add a new "PayPal" payment method cleanly/seamlessly without making any changes to the existing codebase.
 

@@ -5,10 +5,11 @@ Design Patterns provide a common language and framework to the task of programmi
 - [Dependency Inversion Principle](/SoftwareDevelopmentDesignPrinciples/DepInv/README.md)
 - There are several other well known categories of programming design patterns which are highly recommended as part of any large scale software development process. Please see [DESIGN PATTERNS in GO](https://refactoring.guru/design-patterns/go) for description and code samples for these well proven design patterns:
   - Creational Patterns
-    - [Abstract Factory Pattern](/SoftwareDevelopmentDesignPrinciples/AbstractFactory/README.md)
     - [Singleton Pattern](/SoftwareDevelopmentDesignPrinciples/Singleton/README.md)
+    - [Abstract Factory Pattern](/SoftwareDevelopmentDesignPrinciples/AbstractFactory/README.md)
     - ...
   - Structural Patterns
+    - [Facade Pattern](/SoftwareDevelopmentDesignPrinciples/Facade/README.md)
     - ...
   - Behavioral Patterns
     - [Chain of Responsibility](/SoftwareDevelopmentDesignPrinciples/ChainofResponsibility/README.md)

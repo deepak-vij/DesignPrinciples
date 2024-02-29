@@ -1,8 +1,6 @@
-# Singleton
-**Singleton** is a creational design pattern, which ensures that only one object of its kind exists and provides a single point of access to it for any other code.
+# Adapter
+**Adapter** is a structural design pattern, which allows incompatible objects to collaborate. The Adapter acts as a wrapper between two objects. It catches calls for one object and transforms them to format and interface recognizable by the second object.
 
-The key goal of the Singleton pattern is to **Ensure that a class/type has just a single instance**. The key usage of this pattern is to cover an instance where there must be a single "broker" controlling access to a resource. The most common reason for this is to control access to some shared resource—for example, shared caching, common logging etc. This Pattern is leveraged to create a cache manager that maintains a single cache instance. This ensures consistent caching strategies throughout the application, avoiding duplication of cache data and optimizing memory usage.
-
-Similarly, a single common Logger manager may be used to manage logging operations throughout the application by ensuring that only one instance of the Logger exists, and all parts of the system can access it easily.
-
-See the companion [code example](/SoftwareDevelopmentDesignPrinciples/Singleton).
+See the companion [code example](/SoftwareDevelopmentDesignPrinciples/Adapter). In this example, we have a client code that expects some features of an object (Lightning port), but we have another object called adaptee (Windows laptop) which offers the same functionality but through a different interface (USB port). This is where the Adapter pattern comes into the picture. We create a struct type known as adapter that will:
+- Adhere to the same interface which the client expects (Lightning port).
+- Translate the request from the client to the adaptee in the form that the adaptee expects. The adapter accepts a Lightning connector and then translates its signals into a USB format and passes them to the USB port in windows laptop.

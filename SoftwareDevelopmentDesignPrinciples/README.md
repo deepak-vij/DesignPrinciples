@@ -4,7 +4,7 @@ Design Patterns provide a common language and framework to the task of programmi
 - [Open-Closed Design Principle enabled using Interfaces/Polymorphism](/SoftwareDevelopmentDesignPrinciples/OCP/README.md)
 - [Dependency Inversion Principle](/SoftwareDevelopmentDesignPrinciples/DepInv/README.md)
 - Inversion of Control (IoC) Pattern
-- There are several other well known categories of programming design patterns which are highly recommended as part of any large scale software development process. Please see [DESIGN PATTERNS in GO](https://refactoring.guru/design-patterns/go) for description and code samples for these well proven design pattern:
+- There are several other well known categories of programming design patterns which are highly recommended as part of any large scale software development process. Please see [DESIGN PATTERNS in GO](https://refactoring.guru/design-patterns/go) for description and code samples for these well proven design patterns:
   - Creational Patterns
   - Structural Patterns
   - Behavioral Patterns

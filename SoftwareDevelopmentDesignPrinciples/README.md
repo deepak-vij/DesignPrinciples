@@ -3,14 +3,17 @@ Design Patterns provide a common language and framework to the task of programmi
 - [Towards Modern Development of Cloud Applications – beyond “Microservices”](/SoftwareDevelopmentDesignPrinciples/BeyondMicroServices/README.md)
 - [Open-Closed Design Principle enabled using Interfaces/Polymorphism](/SoftwareDevelopmentDesignPrinciples/OCP/README.md)
 - [Dependency Inversion Principle](/SoftwareDevelopmentDesignPrinciples/DepInv/README.md)
-- There are several other well known categories of programming design patterns which are highly recommended as part of any large scale software development process. Please see [DESIGN PATTERNS in GO](https://refactoring.guru/design-patterns/go) for description and code samples for these well proven design patterns:
+- There are several other well known categories of programming design patterns, these are all highly recommended as part of any large scale software development process. The following is a list of few notable & well proven patterns:
   - Creational Patterns
     - [Singleton Pattern](/SoftwareDevelopmentDesignPrinciples/Singleton/README.md)
     - [Abstract Factory Pattern](/SoftwareDevelopmentDesignPrinciples/AbstractFactory/README.md)
     - ...
   - Structural Patterns
     - [Facade Pattern](/SoftwareDevelopmentDesignPrinciples/Facade/README.md)
+    - [Composite Pattern](/SoftwareDevelopmentDesignPrinciples/Composite/README.md)
     - ...
   - Behavioral Patterns
     - [Chain of Responsibility](/SoftwareDevelopmentDesignPrinciples/ChainofResponsibility/README.md)
+    - [Strategy Pattern](/SoftwareDevelopmentDesignPrinciples/Strategy/README.md)
+    - [Observer Pattern](/SoftwareDevelopmentDesignPrinciples/Observer/README.md)
     - ...

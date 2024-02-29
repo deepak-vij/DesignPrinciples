@@ -1,0 +1,4 @@
+# Strategy
+**Strategy** pattern is a behavioral design pattern. Strategy pattern allows changing the behavior of an object at the runtime which is useful in certain cases.
+
+See the companion [code example](/SoftwareDevelopmentDesignPrinciples/Strategy). In this example, suppose you have a toy that recites the dialogues of superheroes. You can select a superhero by pressing a button of the toy. When you hit the play button on the toy it recites the dialogue of the superhero and as you change the superhero on the toy it recites the dialogue for that superhero. You can notice how the dialogue recite behavior (of the toy) is changing while playing by pressing buttons. This is the Strategy Pattern.

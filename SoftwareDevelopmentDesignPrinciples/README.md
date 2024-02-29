@@ -4,15 +4,15 @@ Design Patterns provide a common language and framework to the task of programmi
 - [Open-Closed Design Principle enabled using Interfaces/Polymorphism](/SoftwareDevelopmentDesignPrinciples/OCP/README.md)
 - [Dependency Inversion Principle](/SoftwareDevelopmentDesignPrinciples/DepInv/README.md)
 - There are several other well known categories of programming design patterns, these are all highly recommended as part of any large scale software development process. The following is a list of few notable & well proven patterns:
-  - Creational Patterns
-    - [Singleton Pattern](/SoftwareDevelopmentDesignPrinciples/Singleton/README.md)
-    - [Abstract Factory Pattern](/SoftwareDevelopmentDesignPrinciples/AbstractFactory/README.md)
-    - ...
   - Structural Patterns
     - [Facade Pattern](/SoftwareDevelopmentDesignPrinciples/Facade/README.md)
     - [Composite Pattern](/SoftwareDevelopmentDesignPrinciples/Composite/README.md)
     - [Adapter Pattern](/SoftwareDevelopmentDesignPrinciples/Adapter/README.md)
     - [Proxy Pattern](/SoftwareDevelopmentDesignPrinciples/Proxy/README.md)
+    - ...
+  - Creational Patterns
+    - [Singleton Pattern](/SoftwareDevelopmentDesignPrinciples/Singleton/README.md)
+    - [Abstract Factory Pattern](/SoftwareDevelopmentDesignPrinciples/AbstractFactory/README.md)
     - ...
   - Behavioral Patterns
     - [Chain of Responsibility](/SoftwareDevelopmentDesignPrinciples/ChainofResponsibility/README.md)

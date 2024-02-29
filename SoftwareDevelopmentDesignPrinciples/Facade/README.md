@@ -1,0 +1,6 @@
+# Facade
+In software engineering, the **Facade Pattern** is a structural pattern that provides a simplified interface to a larger body of code. It’s used to make a complex system more accessible, easier to use, and more understandable for end-users. 
+
+The key goal of this pattern is to provide a unified interface to a set of interfaces in a subsystem. It defines a higher-level interface that makes the subsystem easier to use. The subsystem can be a complex set of classes or a library that performs a specific task. The Facade Pattern is used to hide the complexities of the subsystem and provide a simplified interface to the end-user.
+
+See the companion [code example](/SoftwareDevelopmentDesignPrinciples/Facade). In this example code, we have a ComputerFacade that provides a simplified interface to a set of subsystems such as CPU, Memory, and HardDrive. The Start method of the ComputerFacade performs a series of actions that are required to start a computer. The end-user only needs to call the Start method to start the computer, and the ComputerFacade takes care of the complexities of the subsystems.

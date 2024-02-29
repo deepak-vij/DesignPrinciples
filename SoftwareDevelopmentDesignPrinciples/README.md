@@ -11,6 +11,8 @@ Design Patterns provide a common language and framework to the task of programmi
   - Structural Patterns
     - [Facade Pattern](/SoftwareDevelopmentDesignPrinciples/Facade/README.md)
     - [Composite Pattern](/SoftwareDevelopmentDesignPrinciples/Composite/README.md)
+    - [Adapter Pattern](/SoftwareDevelopmentDesignPrinciples/Adapter/README.md)
+    - [Proxy Pattern](/SoftwareDevelopmentDesignPrinciples/Proxy/README.md)
     - ...
   - Behavioral Patterns
     - [Chain of Responsibility](/SoftwareDevelopmentDesignPrinciples/ChainofResponsibility/README.md)

@@ -1,4 +1,4 @@
 # Software Design Principles &amp; Guidelines
-- [Platform Engineering Design Principles](/DistributedSystemsDesignPrinciples/README.md)
+- [Platform Engineering Design Principles & Patterns](/DistributedSystemsDesignPrinciples/README.md)
 <br><br>
 - [Software Development Design Principles & Patterns](/SoftwareDevelopmentDesignPrinciples/README.md)

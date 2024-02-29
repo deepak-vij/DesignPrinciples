@@ -17,5 +17,4 @@ Design Patterns provide a common language and framework to the task of programmi
   - Behavioral Patterns
     - [Chain of Responsibility](/SoftwareDevelopmentDesignPrinciples/ChainofResponsibility/README.md)
     - [Strategy Pattern](/SoftwareDevelopmentDesignPrinciples/Strategy/README.md)
-    - Observer Pattern
     - ...

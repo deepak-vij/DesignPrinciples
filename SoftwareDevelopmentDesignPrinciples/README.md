@@ -7,4 +7,6 @@ Design Patterns provide a common language and framework to the task of programmi
   - Creational Patterns
     - [Abstract Factory Pattern](/SoftwareDevelopmentDesignPrinciples/AbstractFactory/README.md)
     - [Structural Pattern](/SoftwareDevelopmentDesignPrinciples/Singleton/README.md)
+    - ...
   - Behavioral Patterns
+    - ...

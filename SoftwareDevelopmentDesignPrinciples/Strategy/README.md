@@ -1,8 +1,19 @@
 # Strategy
-**Strategy** pattern is a behavioral design pattern. Strategy pattern allows changing the behavior of an object at the runtime which is useful in certain cases. “The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.”
+**Strategy** pattern is a behavioral design pattern that turns a set of behaviors into objects and makes them interchangeable inside original context object. The Strategy pattern suggests that you take a type that does something specific in a lot of different ways and extract all of these algorithms into separate types called strategies.
 
-See the companion [code example](/SoftwareDevelopmentDesignPrinciples/Strategy). In this example, suppose we have a toy that recites the dialogues of superheroes. Users can select a superhero by pressing a button of the toy. When the play button is pressed on the toy, it recites the dialogue of the superhero and as the user changes the superhero on the toy it recites the dialogue for that superhero. One can notice how the dialogue recite behavior (of the toy) is changing while playing by pressing buttons. This is what the Strategy Pattern achieves.
+The original type, called context, must have a field for storing a reference to one of the strategies. The context delegates the work to a linked strategy object instead of executing it on its own.
 
-The behavior of the toy object in our example is coming from an interface, DialogueReciter. And the actual implementation of the behavior, Recite, is done separately by different concrete types e.g. SpiderMan , SuperMan , and BatMan . Had the toy behavior been coded to the concrete type, we would be locked to use only that specific behavior. The key observation is that — **Program to an interface, not an implementation** and it is an important design principle.
+The context isn’t responsible for selecting an appropriate algorithm for the job. Instead, the client passes the desired strategy to the context. In fact, the context doesn’t know much about strategies. It works with all strategies through the same generic interface, which only exposes a single method for triggering the algorithm encapsulated within the selected strategy.
 
-Key idea is that “Identify the aspects of the application that vary and separate them from what stays the same.” In our companion code example, this is exactly what we have done! We knew that the behavior of the toy is going to change and hence we want toy to encapsulate so that later we can modify or extend this varying part without affecting those that do not. The strategy pattern will enable dynamic behavior changes without affecting other parts of the application.
+The original object, called context, holds a reference to a strategy object. The context delegates executing the behavior to the linked strategy object. In order to change the way the context performs its work, other objects may replace the currently linked strategy object with another one.
+
+This way the context becomes independent of concrete strategies, so you can add new algorithms or modify existing ones without changing the code of the context or other strategies.
+
+See the companion [code example](/SoftwareDevelopmentDesignPrinciples/Strategy). Suppose you are building an In-Memory-Cache. Since it’s in memory, it has a limited size. Whenever it reaches its maximum size, some entries have to be evicted to free-up space. This can happen via several algorithms. Some of the popular algorithms are the following:
+- Least Recently Used (LRU): remove an entry that has been used least recently.
+- First In, First Out (FIFO): remove an entry that was created first.
+- Least Frequently Used (LFU): remove an entry that was least frequently used.
+
+The problem is how to decouple our cache class from these algorithms so that we can change the algorithm at run time. Also, the cache class should not change when a new algorithm is being added. This is where Strategy pattern comes into the picture. It suggests creating a family of the algorithm with each algorithm having its own class. Each of these classes follows the same interface, and this makes the algorithm interchangeable within the family. Let’s say the common interface name is evictionAlgo.
+
+Now our main cache class will embed the evictionAlgo interface. Instead of implementing all types of eviction algorithms in itself, our cache class will delegate the execution to the evictionAlgo interface. Since evictionAlgo is an interface, we can change the algorithm in run time to either LRU, FIFO, LFU without changing the cache class.

@@ -1,0 +1,29 @@
+# Taming the Operational Complexities of Platform Engineering Environment
+Following are the various aspects of taming the **Operational Complexities** of Platform Engineering environment:
+- **Monitoring**
+  - Infrastructure health monitoring
+  - Service health monitoring: traffic, errors, latency
+  - Business metrics monitoring
+- **Oncall, Anomaly Detection, and Escalations/Alerting**
+  - Detecting anomalies from the monitoring data is a tough challenge
+- **Outages & Incident Management Processes**
+  - Communicating outages across the organization
+  - Mitigation now, investigation tomorrow/later
+- **Postmortems, Incident Reviews & a Culture of Ongoing Improvements**
+  - Contributors
+  - Incident Summary
+  - Impact
+  - Timeline
+  - Root Cause Analysis
+  - Detection Mitigation & Prevention Analysis
+  - Lessons Learnt
+  - Follow-up Actions
+- **ChaosMonkey like Failover Drills, Planned Downtime & Capacity Planning & Blackbox Testing**
+  - A data center failover drill
+  - Planned service downtime exercises
+  - Black-box testing
+  - Capacity Planning
+  - Reliability as an Ongoing Investment
+- **SLOs, SLAs & Reporting on them**
+  - Business-level SLOs or functional SLOs
+  - SLA - Service Level Agreement - is a broader agreement between a service provider and a service consumer. Usually, multiple SLOs make up an SLA. For example, the payments system being 99.99% available could be an SLA, that breaks down to specific SLOs for each supporting system.

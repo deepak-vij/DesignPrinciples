@@ -27,3 +27,4 @@ Following are the various aspects of taming the **Operational Complexities** of 
 - **SLOs, SLAs & Reporting on them**
   - Business-level SLOs or functional SLOs
   - SLA - Service Level Agreement - is a broader agreement between a service provider and a service consumer. Usually, multiple SLOs make up an SLA. For example, the payments system being 99.99% available could be an SLA, that breaks down to specific SLOs for each supporting system.
+- **Site Reliability Engineering (SRE) as an Independent/Dedicated Team**

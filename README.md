@@ -3,6 +3,6 @@ The following links cover a summary of cloud-scale software platform development
 
 - [Platform Engineering Design Principles & Patterns](/DistributedSystemsDesignPrinciples/README.md)
 <br><br>
-- [Taming the Operational Complexities of Platform Engineering Environment](/DistributedSystemsDesignPrinciples/OperationalComplexities.md)
+- [Taming the **Operational Complexities** of Platform Engineering Environment](/DistributedSystemsDesignPrinciples/OperationalComplexities.md)
 <br><br>
 - [Software Development Design Principles & Patterns](/SoftwareDevelopmentDesignPrinciples/README.md)

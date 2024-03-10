@@ -4,6 +4,7 @@ Design Patterns provide a common language and framework to the task of programmi
 - [Open-Closed Design Principle enabled using Interfaces/Polymorphism](/SoftwareDevelopmentDesignPrinciples/OCP/README.md)
 - [Dependency Inversion Principle](/SoftwareDevelopmentDesignPrinciples/DepInv/README.md)
 - [Bloom Filter Data Stucture](/SoftwareDevelopmentDesignPrinciples/BloomFilters/README.md)
+- [Consistent Hashing](/SoftwareDevelopmentDesignPrinciples/ConsistentHashing/README.md)
 - There are several other well known categories of programming design patterns, these are all highly recommended as part of any large scale software development process. The following is a list of few notable & well proven patterns (including sample working code):
   - Structural Patterns
     - [Facade Pattern](/SoftwareDevelopmentDesignPrinciples/Facade/README.md)

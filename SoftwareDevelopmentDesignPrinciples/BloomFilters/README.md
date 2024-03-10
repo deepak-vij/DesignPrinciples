@@ -1,6 +1,8 @@
 # Bloom Filter Data Structure
 A bloom filter is a set-like data structure that is more space-efficient compared to traditional set-like data structures such as hash tables or trees. The key difference is that it is probabilistic, meaning it cannot give a 100% certain answer to certain queries. More specifically, a bloom filter can tell you with 100% certainty that something is not in the set. But it cannot tell you with 100% certainty that something is in the set.
 
+One way bloom filters are used is to serve as a type of ‘cache’ for large data sets, where you expect that most queries return that an item is not in the set. So instead of querying the large set directly, you first query the bloom filter. In most cases, the bloom filter tells us that an item is absent and that’s what we care about. And when an item might be present you query the actual data set directly.
+
 Bloom filters are typically used in OLAP databases such as Snowflake warehouse as part of the data skipping/pruning (for reading relevant underlying parquet or Snowflake specific files residing on S3) optimization scheme for a given query – use bloom filter data structure as metadata to decide which files are relevant for a given query, much smaller than indices and more load-friendly.
 
 Similarly, LSM-tree based key-value (KV) stores suffer from severe read amplification because searching a key requires to check multiple SSTables. To reduce extra I/Os, Bloom filters are usually deployed in KV stores to improve read performance.
